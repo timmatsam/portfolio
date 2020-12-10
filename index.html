@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My first three.js app</title>
+		<title>3D Solar System</title>
 		<style>
 			body {
 				margin: 0;
@@ -16,10 +16,8 @@
 		<script src="/node_modules/three/examples/js/controls/OrbitControls.js"></script>
 
 		<script type="module">
-			// import * as THREE from '/node_modules/three/build/three.module.js';
-			import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-			// import * as OrbitControls from '/node_modules/three/examples/js/controls/OrbitControls.js';
-			import Stats from '/node_modules/three/examples/jsm/libs/stats.module.js';
+			import { GLTFLoader } from "/node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+			import Stats from "/node_modules/three/examples/jsm/libs/stats.module.js";
 
 			const renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setSize(window.innerWidth, window.innerHeight);
@@ -35,30 +33,29 @@
 			camera.lookAt(0, 0, 0);
 			const controls = new THREE.OrbitControls(camera, renderer.domElement);
 			controls.enableKeys = false;
-			window.addEventListener('resize', () => {
+			window.addEventListener("resize", () => {
 				renderer.setSize(window.innerWidth, window.innerHeight);
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
 			});
 
 			//TEXTURES
-			const texture = new THREE.TextureLoader().load('public/1_earth_8k.jpg');
-			const sun = new THREE.TextureLoader().load('public/2k_sun.jpg');
-			const pTexture = new THREE.TextureLoader().load('public/particle.jpg');
+			const texture = new THREE.TextureLoader().load("public/1_earth_8k.jpg");
+			const sun = new THREE.TextureLoader().load("public/2k_sun.jpg");
+			const pTexture = new THREE.TextureLoader().load("public/particle.jpg");
 			const andromedaGalaxy = new THREE.TextureLoader().load(
-				'public/andromeda_galaxy_with_h-alpha.jpg'
+				"public/andromeda_galaxy_with_h-alpha.jpg"
 			);
 			const milkyWay = new THREE.TextureLoader().load(
-				'public/2k_stars_milky_way.jpg'
+				"public/2k_stars_milky_way.jpg"
 			);
-			const glow = new THREE.TextureLoader().load('public/glow.png');
+			const glow = new THREE.TextureLoader().load("public/glow.png");
 
 			//LOAD MODELS
-
 			const loader = new GLTFLoader();
 			let ship;
 			loader.load(
-				'spaceship/scene.gltf',
+				"spaceship/scene.gltf",
 				function (gltf) {
 					ship = gltf.scene;
 					gltf.scene.scale.set(5, 5, 5);
@@ -74,9 +71,10 @@
 
 			let satellite;
 			let satellite2;
+
 			async function loading() {
 				await loader.load(
-					'old_satellite/scene.gltf',
+					"old_satellite/scene.gltf",
 					function (gltf) {
 						satellite = gltf.scene;
 						satellite2 = satellite.clone();
@@ -94,6 +92,7 @@
 					}
 				);
 			}
+
 			loading();
 			scene.add(satellites);
 			//add ambient light
@@ -152,22 +151,22 @@
 				blending: THREE.AdditiveBlending,
 			});
 			const ceresMaterial = new THREE.MeshLambertMaterial({
-				map: new THREE.TextureLoader().load('public/4k_ceres_fictional.jpg'),
+				map: new THREE.TextureLoader().load("public/4k_ceres_fictional.jpg"),
 				blending: THREE.AdditiveBlending,
 				transparent: true,
 			});
 			const erisMaterial = new THREE.MeshLambertMaterial({
-				map: new THREE.TextureLoader().load('public/4k_eris_fictional.jpg'),
+				map: new THREE.TextureLoader().load("public/4k_eris_fictional.jpg"),
 				blending: THREE.AdditiveBlending,
 				transparent: true,
 			});
 			const haumeaMaterial = new THREE.MeshLambertMaterial({
-				map: new THREE.TextureLoader().load('public/4k_haumea_fictional.jpg'),
+				map: new THREE.TextureLoader().load("public/4k_haumea_fictional.jpg"),
 				blending: THREE.AdditiveBlending,
 				transparent: true,
 			});
 			const makeMaterial = new THREE.MeshLambertMaterial({
-				map: new THREE.TextureLoader().load('public/4k_makemake_fictional.jpg'),
+				map: new THREE.TextureLoader().load("public/4k_makemake_fictional.jpg"),
 				blending: THREE.AdditiveBlending,
 				transparent: true,
 			});
@@ -242,9 +241,9 @@
 						// INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
 						// INTERSECTED.material.color.setHex(0xff0000);
 						INTERSECTED.currentScale = [
-							INTERSECTED.scale['x'],
-							INTERSECTED.scale['y'],
-							INTERSECTED.scale['z'],
+							INTERSECTED.scale["x"],
+							INTERSECTED.scale["y"],
+							INTERSECTED.scale["z"],
 						];
 						INTERSECTED.scale.set(3, 3, 3);
 					}
@@ -266,7 +265,7 @@
 			const xSpeed = 1;
 			const ySpeed = 1;
 
-			document.addEventListener('keydown', onDocumentKeyDown, false);
+			document.addEventListener("keydown", onDocumentKeyDown, false);
 			function onDocumentKeyDown(event) {
 				const keyCode = event.which;
 				console.log(keyCode);
@@ -295,8 +294,8 @@
 				eris.rotation.y += 0.01;
 				haumea.rotation.y += 0.03;
 				makeMake.rotation.y += 0.09;
-				window.addEventListener('mousemove', onMouseMove, false);
-				window.addEventListener('keydown', onDocumentKeyDown, false);
+				window.addEventListener("mousemove", onMouseMove, false);
+				window.addEventListener("keydown", onDocumentKeyDown, false);
 
 				render();
 
@@ -310,7 +309,7 @@
 			scene.add(sound);
 			const audioLoader = new THREE.AudioLoader();
 			audioLoader.load(
-				'public/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3',
+				"public/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3",
 				function (buffer) {
 					sound.setBuffer(buffer);
 					sound.setLoop(true);
@@ -322,22 +321,3 @@
 		</script>
 	</body>
 </html>
-<!-- 
-	https://aerotwist.com/tutorials/creating-particles-with-three-js/
-	//MVP 
-	//spaceship within the orbit jostling up and down
-	//sattelines in earth's gravity field
-	//sun's moon 
-	//a shooting star moving across the background
-	//asteroid
-	//jupiter
-	//saturn
-	//colunbia space shuttle blowing up
-	//change to earth
-	//solar system in the distance
-	//put an 
-	//can add physics to particles
-	//create a sphere
-	//snowy background and houses
-	//create a line that divides into two lines moving along the y axis in opposite directions while the camera gets closer
-	//  -->
