@@ -15,10 +15,12 @@ a.navlink {
   color: black;
   text-decoration: none;
 }
+
 a.navlink.active {
   font-style: bold;
   color: rgb(22, 130, 180);
 }
+
 a.navlink:before {
   content: "";
   position: absolute;
@@ -31,10 +33,12 @@ a.navlink:before {
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
 }
+
 a.navlink:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
+
 #homepage {
   display: flex;
   flex-direction: column;

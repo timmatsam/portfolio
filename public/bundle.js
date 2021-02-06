@@ -125,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello. Welcome to my portfolio page. I created this portfolio page a"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I recently switched my career from healthcare to programming. My background consisted of things such as researching pancreatic cancer and working as a pathology assistant. I am now a fresh graduate with expertise as a full stack web developer in which my skill set is primarily Node.js, React and PostgreSQL. I love to read - my favorite device of last year was the Kindle - and currently my interests lie in infrastructure (transportation, architecture) as well as 2D and 3D design. Currently job searching so let\u2019s link up! Give me a call.", " "));
 });
 
 /***/ }),
@@ -221,7 +221,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "homepage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "welcome"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["Headshot"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "HelloooooooooooooooooooooooooooooooolleH")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["Headshot"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["About"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "caption"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "fuji",

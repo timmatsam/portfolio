@@ -5,7 +5,8 @@ export default () => {
     <div id="homepage">
       <div id="welcome">
         <Headshot />
-        <h1>HelloooooooooooooooooooooooooooooooolleH</h1>
+        {/* <h1>Welcome</h1> */}
+        <About />
       </div>
       <div id="caption">
         <img id="fuji" src="assets/fuji.jpg"></img>
