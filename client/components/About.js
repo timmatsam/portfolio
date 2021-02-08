@@ -11,7 +11,7 @@ export default () => {
         primarily Node.js, React and PostgreSQL. I love to read - my favorite
         device of last year was the Kindle - and currently my interests lie in
         infrastructure (transportation, architecture) as well as 2D and 3D
-        design. Currently job searching so let’s link up! Give me a call.{" "}
+        design. Currently job searching so let’s link up!
       </p>
     </div>
   );

@@ -6,9 +6,9 @@ export default () => {
       <NavLink className="navlink" exact to="/">
         Homepage
       </NavLink>
-      <NavLink className="navlink" to="/about">
+      {/* <NavLink className="navlink" to="/about">
         About
-      </NavLink>
+      </NavLink> */}
       <NavLink className="navlink" to="/projects">
         Projects
       </NavLink>

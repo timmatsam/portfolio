@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { SolarSystem, LoadingScreen, NavBar, Routes } from "../index";
+import { SolarSystem, LoadingScreen, NavBar, Routes, Footer } from "../index";
 
 export default () => {
   return (
