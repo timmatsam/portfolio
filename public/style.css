@@ -76,7 +76,10 @@ a.navlink:hover:before {
   padding: 5px;
 }
 #welcome p {
-  margin-right: 50px;
+  /* margin-right: 50px; */
+  padding-right: 375px;
+  padding-left: 145px;
+  font-style: italic;
 }
 #headshot {
   width: 10%;
@@ -91,6 +94,8 @@ a.navlink:hover:before {
 }
 #caption p {
   margin: 1px;
+  padding-top: 10px;
+  color: rgba(79, 142, 172, 0.904);
 }
 .projects {
   display: grid;
@@ -115,6 +120,7 @@ a.navlink:hover:before {
   height: 50%;
   position: relative;
   justify-self: center;
+  margin-left: 200px;
 }
 
 .indProjects a img {
@@ -123,6 +129,9 @@ a.navlink:hover:before {
   font-family: ave;
 }
 
+.content {
+  padding-right: 250px;
+}
 .redirect {
   position: absolute;
   visibility: visible;
@@ -164,8 +173,18 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  position: absolute;
 }
-
+footer a {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 2;
+  width: 1%;
+}
+footer a img:hover {
+  transition: 0.4s;
+  opacity: 0.4;
+}
 footer p {
   align-self: center;
 }

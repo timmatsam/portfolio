@@ -10,7 +10,7 @@ export default () => {
           <h3 class="redirect">Redirect to game.</h3>
         </a>
 
-        <div>
+        <div className="content">
           <h2>Haircutz Game</h2>
           <ul>
             <>Node.js |</>
@@ -25,11 +25,11 @@ export default () => {
         </div>
       </div>
       <div class="indProjects">
-        <a href="https://oudoor-equipment-incorporated.herokuapp.com">
+        <a href="https://outdoor-equipment-incorporated.herokuapp.com/products">
           <img src="assets/outdoor.png" />{" "}
           <h3 class="redirect">Redirect to ecommerce website.</h3>
         </a>
-        <div>
+        <div className="content">
           <h2>Outdoor Equipment E-commerce Website</h2>
           <ul>
             <>Node.js |</>

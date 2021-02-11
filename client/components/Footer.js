@@ -2,10 +2,15 @@ import React from "react";
 
 export default () => {
   return (
-    <footer id="footer">
+    <footer>
       <p>timmatsam@gmail.com</p>
-      <img className="logo" src="assets/linkedin.png" />
-      <img className="logo" src="assets/github.png" />
+      <a href="https://www.linkedin.com/in/tim-samuel-40204b120/">
+        <img className="logo" src="assets/linkedin.png" />{" "}
+      </a>
+
+      <a href="https://github.com/timmatsam">
+        <img className="logo" src="assets/github.png" />{" "}
+      </a>
     </footer>
   );
 };
