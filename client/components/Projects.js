@@ -17,8 +17,9 @@ export default () => {
             <> Phaser 3 |</>
             <> Socket.IO</>
           </ul>
+          <div></div>
           <p>
-            A competitively styled online 2D tower defense style game where
+            A competitively styled online 2D tower defense inspired game where
             players compete against each other to garner a specific amount of
             resource points before the other player.{" "}
           </p>
