@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   margin: 0;
@@ -15,11 +19,15 @@ body {
 }
 
 #app {
-  flex: 1;
+  display: flex;
+  /* flex: 2; */
+  min-height: 100%;
 }
 #main {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  padding-bottom: 100px;
 }
 
 #navbar {
@@ -132,6 +140,9 @@ a.navlink:hover:before {
 .content {
   padding-right: 250px;
 }
+.content h2 {
+  margin: 0px;
+}
 .redirect {
   position: absolute;
   visibility: visible;
@@ -174,11 +185,12 @@ footer {
   left: 0;
   right: 0;
   position: absolute;
+  margin-top: -20px;
+  clear: both;
 }
 footer a {
   display: flex;
   justify-content: center;
-  flex-shrink: 2;
   width: 1%;
 }
 footer a img:hover {

@@ -4,10 +4,10 @@ import React from "react";
 export default () => {
   return (
     <div className="projects">
-      <div class="indProjects">
+      <div className="indProjects">
         <a href="https://haircutz.herokuapp.com/">
           <img src="assets/haircutz.png" />{" "}
-          <h3 class="redirect">Redirect to game.</h3>
+          <h3 className="redirect">Redirect to game.</h3>
         </a>
 
         <div className="content">
@@ -24,10 +24,10 @@ export default () => {
           </p>
         </div>
       </div>
-      <div class="indProjects">
+      <div className="indProjects">
         <a href="https://outdoor-equipment-incorporated.herokuapp.com/products">
           <img src="assets/outdoor.png" />{" "}
-          <h3 class="redirect">Redirect to ecommerce website.</h3>
+          <h3 className="redirect">Redirect to ecommerce website.</h3>
         </a>
         <div className="content">
           <h2>Outdoor Equipment E-commerce Website</h2>

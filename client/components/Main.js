@@ -7,7 +7,7 @@ export default () => {
     <div id="main">
       <NavBar />
       <Routes />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
