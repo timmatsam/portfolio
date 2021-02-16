@@ -4,7 +4,6 @@ import SolarSystem from "./components/SolarSystem";
 import LoadingScreen from "./components/LoadingScreen";
 import NavBar from "./components/NavBar";
 import Routes from "./components/Routes";
-import About from "./components/About";
 import Homepage from "./components/Homepage";
 import Headshot from "./components/Headshot";
 import Projects from "./components/Projects";
@@ -16,7 +15,6 @@ export {
   LoadingScreen,
   NavBar,
   Routes,
-  About,
   Homepage,
   Headshot,
   Projects,

@@ -110,26 +110,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_0___default.a.render( /*#__PURE__*/react__WEB
 
 /***/ }),
 
-/***/ "./client/components/About.js":
-/*!************************************!*\
-  !*** ./client/components/About.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I recently switched my career from healthcare to programming. My background consisted of things such as researching pancreatic cancer and working as a pathology assistant. I am now a fresh graduate with expertise as a full stack web developer in which my skill set is primarily Node.js, React and PostgreSQL. I love to read - my favorite device of last year was the Kindle - and currently my interests lie in infrastructure (transportation, architecture) as well as 2D and 3D design. Currently job searching so let\u2019s link up!"));
-});
-
-/***/ }),
-
 /***/ "./client/components/Box.js":
 /*!**********************************!*\
   !*** ./client/components/Box.js ***!
@@ -249,7 +229,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "homepage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "welcome"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["Headshot"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I recently switched my career from healthcare to programming. My background consisted of things such as researching pancreatic cancer and working as a pathology assistant. I am now a fresh graduate with expertise as a full stack web developer in which my skill set is primarily Node.js, React and PostgreSQL. I love to read - my favorite device of last year was the Kindle - and currently my interests lie in infrastructure (transportation, architecture) as well as 2D and 3D design. Currently job searching so let\u2019s link up!", " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_1__["Headshot"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I recently switched my career from healthcare to programming. My background consisted of things such as researching pancreatic cancer and working as a pathology assistant. I am now a fresh graduate with expertise as a full stack web developer in which my skill set is primarily Node.js, React and PostgreSQL. I love to read - my favorite device of last year was the Kindle - and currently my interests lie in infrastructure (transportation, architecture) as well as improvising on piano (I love classical music) and learning electric guitar (I also love rock). Currently job searching so let\u2019s link up!", " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "caption"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "fuji",
@@ -399,8 +379,6 @@ __webpack_require__.r(__webpack_exports__);
     exact: true,
     path: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_2__["Homepage"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_2__["About"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/solarsystem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_2__["SolarSystem"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/projects"
@@ -715,7 +693,7 @@ class SolarSystem extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
 /*!*************************!*\
   !*** ./client/index.js ***!
   \*************************/
-/*! exports provided: Main, Box, SolarSystem, LoadingScreen, NavBar, Routes, About, Homepage, Headshot, Projects, Footer */
+/*! exports provided: Main, Box, SolarSystem, LoadingScreen, NavBar, Routes, Homepage, Headshot, Projects, Footer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -738,21 +716,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Routes */ "./client/components/Routes.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Routes", function() { return _components_Routes__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _components_About__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/About */ "./client/components/About.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _components_About__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+/* harmony import */ var _components_Homepage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Homepage */ "./client/components/Homepage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Homepage", function() { return _components_Homepage__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _components_Homepage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Homepage */ "./client/components/Homepage.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Homepage", function() { return _components_Homepage__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+/* harmony import */ var _components_Headshot__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Headshot */ "./client/components/Headshot.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Headshot", function() { return _components_Headshot__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
-/* harmony import */ var _components_Headshot__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Headshot */ "./client/components/Headshot.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Headshot", function() { return _components_Headshot__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+/* harmony import */ var _components_Projects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Projects */ "./client/components/Projects.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Projects", function() { return _components_Projects__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
-/* harmony import */ var _components_Projects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Projects */ "./client/components/Projects.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Projects", function() { return _components_Projects__WEBPACK_IMPORTED_MODULE_9__["default"]; });
-
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Footer */ "./client/components/Footer.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _components_Footer__WEBPACK_IMPORTED_MODULE_10__["default"]; });
-
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Footer */ "./client/components/Footer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _components_Footer__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
 
 

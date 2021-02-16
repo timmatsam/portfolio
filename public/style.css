@@ -157,11 +157,11 @@ a.navlink:hover:before {
 }
 
 .indProjects a:hover img {
-  transition: 0.6s;
+  transition: 0.5s;
   filter: blur(4px);
 }
 .indProjects a:hover .redirect {
-  transition: 0.6s;
+  transition: 0.5s;
   visibility: visible;
   z-index: 1;
 }
@@ -199,7 +199,7 @@ footer a {
   width: 1%;
 }
 footer a img:hover {
-  transition: 0.4s;
+  transition: 0.5s;
   opacity: 0.4;
 }
 footer p {

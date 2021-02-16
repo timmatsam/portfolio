@@ -8,9 +8,9 @@ export default () => {
       <Route exact path="/">
         <Homepage />
       </Route>
-      <Route path="/about">
+      {/* <Route path="/about">
         <About />
-      </Route>
+      </Route> */}
       <Route path="/solarsystem">
         <SolarSystem />
       </Route>
