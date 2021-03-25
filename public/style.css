@@ -10,17 +10,11 @@ body {
   width: 100%;
   background-color: rgb(249 249 249);
   display: flex;
-  flex-direction: column; /* background: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(123, 185, 202, 0.7),
-    rgba(30, 144, 197, 0.3)
-  ); */
+  flex-direction: column;
 }
 
 #app {
   display: flex;
-  /* flex: 2; */
   min-height: 100%;
 }
 #main {
@@ -28,6 +22,7 @@ body {
   flex-direction: column;
   overflow: auto;
   padding-bottom: 100px;
+  width: 100%;
 }
 
 #navbar {
@@ -77,14 +72,12 @@ a.navlink:hover:before {
   display: flex;
   justify-items: space-evenly;
   align-items: center;
-  margin: 15px;
-  padding: 10px;
+  margin-top: 15px;
 }
 #welcome > * {
   padding: 5px;
 }
 #welcome p {
-  /* margin-right: 50px; */
   padding-right: 375px;
   padding-left: 145px;
   font-style: italic;
@@ -105,10 +98,19 @@ a.navlink:hover:before {
   padding-top: 10px;
   color: rgba(79, 142, 172, 0.904);
 }
+#caption img {
+  width: 100%;
+  margin-top: -3%;
+}
+#caption h1 {
+  position: relative;
+  right: 30%;
+  top: 38%;
+  color: black;
+  font-size: xxx-large;
+}
 .projects {
   display: grid;
-  /* grid-template-columns: 1fr 3fr 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr 2fr; */
   row-gap: 30px;
 }
 .indProjects {
@@ -117,10 +119,6 @@ a.navlink:hover:before {
   column-gap: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  /* font-family: "Libre Baskerville", serif; */
-  /* font-family: "Playfair Display", serif; */
-  /* font-family: "Pangolin", cursive; */
-  /* font-family: "Amiri", serif; */
   font-family: "Cinzel", serif;
 }
 .indProjects a {
@@ -161,7 +159,7 @@ a.navlink:hover:before {
   filter: blur(4px);
 }
 .indProjects a:hover .redirect {
-  transition: 0.5s;
+  transition: 0.7s;
   visibility: visible;
   z-index: 1;
 }
@@ -177,6 +175,14 @@ h1 {
   text-align: center;
 }
 
+.thesis {
+  display: flex;
+  justify-content: center;
+}
+.all-page-container {
+  border-style: groove;
+  border-width: thin;
+}
 footer {
   display: flex;
   justify-content: space-evenly;

@@ -1,5 +1,4 @@
 const isDev = process.env.NODE_ENV === "development";
-
 module.exports = {
   mode: isDev ? "development" : "production",
   entry: [
@@ -30,4 +29,22 @@ module.exports = {
       },
     ],
   },
+  node: {
+    module: "empty",
+    dgram: "empty",
+    dns: "mock",
+    fs: "empty",
+    http2: "empty",
+    net: "empty",
+    tls: "empty",
+    child_process: "empty",
+  },
+  // plugins: [
+  //   new CopyWebpackPlugin([
+  //     {
+  //       from: "node_modules/pdfjs-dist/cmaps/",
+  //       to: "cmaps/",
+  //     },
+  //   ]),
+  // ],
 };

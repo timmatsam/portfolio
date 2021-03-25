@@ -8,6 +8,7 @@ import Homepage from "./components/Homepage";
 import Headshot from "./components/Headshot";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Thesis from "./components/Thesis";
 export {
   Main,
   Box,
@@ -19,4 +20,5 @@ export {
   Headshot,
   Projects,
   Footer,
+  Thesis,
 };
