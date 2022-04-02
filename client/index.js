@@ -1,7 +1,7 @@
-import SolarSystem from "./solarsystem/SolarSystem";
-import HeaderNav from "./HeaderNav";
-import Routes from "./Routes";
-import { Homepage } from "./homepage";
-import Projects from "./projects/Projects";
-import FooterNav from "./FooterNav";
+import SolarSystem from "./views/SolarSystem";
+import { HeaderNav } from "./components/HeaderNav";
+import { Routes } from "./components/Routes";
+import { Homepage } from "./views/Homepage";
+import { Projects } from "./views/Projects";
+import { FooterNav } from "./components/FooterNav";
 export { SolarSystem, HeaderNav, Routes, Homepage, Projects, FooterNav };

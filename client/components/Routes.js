@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { SolarSystem, Homepage, Projects } from "./index";
+import { SolarSystem, Homepage, Projects } from "../index";
 
-export default () => {
+export const Routes = () => {
   return (
     <>
       <Route exact path="/">

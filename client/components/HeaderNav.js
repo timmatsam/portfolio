@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-export default () => {
+export const HeaderNav = () => {
   return (
     <nav id="navbar">
       <NavLink className="navlink" exact to="/">

@@ -1,6 +1,6 @@
 import React from "react";
-import { Headshot } from "./Headshot";
-import { About} from "./About";
+import { Headshot } from "../components/homepage/Headshot";
+import { About } from "../components/homepage/About";
 
 export const Homepage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export const Projects = () => {
   return (
     <div className="projects">
       <div className="indProjects">
@@ -47,6 +47,3 @@ export default () => {
     </div>
   );
 };
-
-//use react to write a piece of text on top of the image
-//on hover let some text appear above the image

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export const FooterNav = () => {
   return (
     <footer>
       <p>timmatsam@gmail.com</p>
