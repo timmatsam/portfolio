@@ -1,6 +1,5 @@
 import React from "react";
-//moved img out of a
-//change .indprojects a img to .indprojects img
+
 export default () => {
   return (
     <div className="projects">
