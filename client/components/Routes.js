@@ -1,8 +1,8 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import { SolarSystem, Homepage, Projects } from "../index";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { SolarSystem, Homepage, Projects } from '../index';
 
-export const Routes = () => {
+function Routes() {
   return (
     <>
       <Route exact path="/">
@@ -16,4 +16,6 @@ export const Routes = () => {
       </Route>
     </>
   );
-};
+}
+
+export default Routes;

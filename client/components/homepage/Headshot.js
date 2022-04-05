@@ -1,3 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export const Headshot = () => <img id="headshot" src="assets/headshot.png" />;
+function Headshot() {
+  return <img id="headshot" src="assets/headshot.png" alt="profile" />;
+}
+
+export default Headshot;

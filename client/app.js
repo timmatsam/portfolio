@@ -1,7 +1,9 @@
-import ReactDOM from "react-dom";
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { HeaderNav, Routes } from "./index";
+import ReactDOM from 'react-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { HeaderNav } from './index';
+import Routes from './components/Routes';
+
 ReactDOM.render(
   <BrowserRouter>
     <div id="main">
@@ -9,5 +11,5 @@ ReactDOM.render(
       <Routes />
     </div>
   </BrowserRouter>,
-  document.getElementById("app")
+  document.getElementById('app'),
 );

@@ -1,7 +1,7 @@
-//particles
+// particles
 const arrOfParticles = [];
 const particleCount = 1800;
-let pMaterial = new THREE.PointsMaterial({
+const pMaterial = new THREE.PointsMaterial({
   size: 1,
   blending: THREE.AdditiveBlending,
   transparent: true,
@@ -10,12 +10,12 @@ let pMaterial = new THREE.PointsMaterial({
 });
 for (let i = 0; i < particleCount; i++) {
   // let pY = 0 - (Math.random() * 1 - .5)
-  let pX = Math.random() * 200 - 100;
-  let pY = Math.random() * 100 - 50;
-  let pZ = Math.random() * 200 - 100;
-  let particle = new THREE.Vector3(pX, pY, pZ); //represents a point in space
+  const pX = Math.random() * 200 - 100;
+  const pY = Math.random() * 100 - 50;
+  const pZ = Math.random() * 200 - 100;
+  const particle = new THREE.Vector3(pX, pY, pZ); // represents a point in space
   arrOfParticles.push(particle);
 }
-let geometryP = new THREE.BufferGeometry().setFromPoints(arrOfParticles);
-let particleSystem = new THREE.Points(geometryP, pMaterial);
+const geometryP = new THREE.BufferGeometry().setFromPoints(arrOfParticles);
+const particleSystem = new THREE.Points(geometryP, pMaterial);
 scene.add(particleSystem);

@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-export const About = ()  => {
+function About() {
   return (
     <p>
       My skills as a software engineer are forever a work in progress. My
@@ -9,4 +9,6 @@ export const About = ()  => {
       great health-tech in Cambridge, MA.
     </p>
   );
-};
+}
+
+export default About;
