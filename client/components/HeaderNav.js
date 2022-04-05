@@ -1,6 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-export default () => {
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+function HeaderNav() {
   return (
     <nav id="navbar">
       <NavLink className="navlink" exact to="/">
@@ -17,4 +18,6 @@ export default () => {
       </NavLink>
     </nav>
   );
-};
+}
+
+export default HeaderNav;

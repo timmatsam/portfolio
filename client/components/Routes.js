@@ -1,24 +1,21 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { About, SolarSystem, Homepage, Projects } from "../index";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { SolarSystem, Homepage, Projects } from '../index';
 
-export default () => {
+function Routes() {
   return (
     <>
       <Route exact path="/">
         <Homepage />
       </Route>
-      {/* <Route path="/about">
-        <About />
-      </Route> */}
       <Route path="/solarsystem">
         <SolarSystem />
       </Route>
       <Route path="/projects">
         <Projects />
       </Route>
-      {/* <Route path="/about" component={About} />
-      <Route path="/solarsystem" component={SolarSystem} /> */}
     </>
   );
-};
+}
+
+export default Routes;
