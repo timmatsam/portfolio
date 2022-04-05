@@ -1,2 +1,2 @@
-A portfolio website showcasing my projects. 
-Written using React on a Node.js framework.
+## Run Website Locally
+`npm run start-dev`

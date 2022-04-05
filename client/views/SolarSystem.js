@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import Stats from "three/examples/jsm/libs/stats.module.js";
+import React from 'react';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import {
   texture,
   sun,
   pTexture,
-  andromedaGalaxy,
   milkyWay,
   glow,
-} from "../threeJSmods/textures";
+} from '../components/solarsystem/threeJSmods/textures';
 
 class SolarSystem extends React.Component {
   constructor() {
     super();
     this.animate;
   }
+
   componentDidMount() {
     // const SolarSystem = () => {
-    console.log("rendering...");
+    console.log('rendering...');
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -29,33 +28,33 @@ class SolarSystem extends React.Component {
       45,
       window.innerWidth / window.innerHeight,
       1,
-      500
+      500,
     );
     camera.position.set(0, 0, 100);
     camera.lookAt(0, 0, 0);
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableKeys = false;
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
     });
 
-    //LOAD MODELS
+    // LOAD MODELS
     const loader = new GLTFLoader();
     let ship;
     loader.load(
-      "assets/spaceship/scene.gltf",
-      function (gltf) {
+      'assets/spaceship/scene.gltf',
+      (gltf) => {
         ship = gltf.scene;
         gltf.scene.scale.set(5, 5, 5);
         gltf.scene.position.set(-40, 30, -300);
         scene.add(gltf.scene);
       },
       undefined,
-      function (error) {
+      (error) => {
         console.error(error);
-      }
+      },
     );
     const satellites = new THREE.Group();
 
@@ -63,8 +62,8 @@ class SolarSystem extends React.Component {
     let satellite2;
 
     loader.load(
-      "assets/old_satellite/scene.gltf",
-      function (gltf) {
+      'assets/old_satellite/scene.gltf',
+      (gltf) => {
         satellite = gltf.scene;
         satellite2 = satellite.clone();
         satellites.add(satellite, satellite2);
@@ -76,23 +75,23 @@ class SolarSystem extends React.Component {
         scene.add(satellite, satellite2);
       },
       undefined,
-      function (error) {
+      (error) => {
         console.error(error);
-      }
+      },
     );
 
     scene.add(satellites);
-    //add ambient light
+    // add ambient light
     const light = new THREE.AmbientLight({ color: 0x160202 });
     scene.add(light);
     const directionalLight = new THREE.DirectionalLight({ intensity: 100 });
     directionalLight.position.set(-100, 0, 0);
     scene.add(directionalLight);
 
-    //particles
+    // particles
     const arrOfParticles = [];
     const particleCount = 1800;
-    let pMaterial = new THREE.PointsMaterial({
+    const pMaterial = new THREE.PointsMaterial({
       size: 1,
       blending: THREE.AdditiveBlending,
       transparent: true,
@@ -101,17 +100,17 @@ class SolarSystem extends React.Component {
     });
     for (let i = 0; i < particleCount; i++) {
       // let pY = 0 - (Math.random() * 1 - .5)
-      let pX = Math.random() * 200 - 100;
-      let pY = Math.random() * 100 - 50;
-      let pZ = Math.random() * 200 - 100;
-      let particle = new THREE.Vector3(pX, pY, pZ); //represents a point in space
+      const pX = Math.random() * 200 - 100;
+      const pY = Math.random() * 100 - 50;
+      const pZ = Math.random() * 200 - 100;
+      const particle = new THREE.Vector3(pX, pY, pZ); // represents a point in space
       arrOfParticles.push(particle);
     }
-    let geometryP = new THREE.BufferGeometry().setFromPoints(arrOfParticles);
-    let particleSystem = new THREE.Points(geometryP, pMaterial);
+    const geometryP = new THREE.BufferGeometry().setFromPoints(arrOfParticles);
+    const particleSystem = new THREE.Points(geometryP, pMaterial);
     scene.add(particleSystem);
 
-    //single line
+    // single line
     const material = new THREE.LineBasicMaterial({ color: 0x0000ff });
     const points = [];
     points.push(new THREE.Vector3(-100, 0, 0));
@@ -119,7 +118,7 @@ class SolarSystem extends React.Component {
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     const line = new THREE.Line(geometry, material);
 
-    //sphere Geometry
+    // sphere Geometry
     const sphereGeometry = new THREE.SphereBufferGeometry(5, 64, 64);
     const spriteMaterial = new THREE.SpriteMaterial({
       map: glow,
@@ -138,22 +137,22 @@ class SolarSystem extends React.Component {
       blending: THREE.AdditiveBlending,
     });
     const ceresMaterial = new THREE.MeshLambertMaterial({
-      map: new THREE.TextureLoader().load("assets/4k_ceres_fictional.jpg"),
+      map: new THREE.TextureLoader().load('assets/4k_ceres_fictional.jpg'),
       blending: THREE.AdditiveBlending,
       transparent: true,
     });
     const erisMaterial = new THREE.MeshLambertMaterial({
-      map: new THREE.TextureLoader().load("assets/4k_eris_fictional.jpg"),
+      map: new THREE.TextureLoader().load('assets/4k_eris_fictional.jpg'),
       blending: THREE.AdditiveBlending,
       transparent: true,
     });
     const haumeaMaterial = new THREE.MeshLambertMaterial({
-      map: new THREE.TextureLoader().load("assets/4k_haumea_fictional.jpg"),
+      map: new THREE.TextureLoader().load('assets/4k_haumea_fictional.jpg'),
       blending: THREE.AdditiveBlending,
       transparent: true,
     });
     const makeMaterial = new THREE.MeshLambertMaterial({
-      map: new THREE.TextureLoader().load("assets/4k_makemake_fictional.jpg"),
+      map: new THREE.TextureLoader().load('assets/4k_makemake_fictional.jpg'),
       blending: THREE.AdditiveBlending,
       transparent: true,
     });
@@ -177,15 +176,15 @@ class SolarSystem extends React.Component {
     sphere2.add(sprite);
     scene.add(sphere);
 
-    //fog - can also do fogexp2 to get something closer to reality
-    //https://threejsfundamentals.org/threejs/lessons/threejs-fog.html
+    // fog - can also do fogexp2 to get something closer to reality
+    // https://threejsfundamentals.org/threejs/lessons/threejs-fog.html
     // scene.fog = new THREE.Fog()
 
     const group = new THREE.Group();
     group.add(particleSystem, sphere2);
     scene.add(group);
 
-    //RAYCASTER
+    // RAYCASTER
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
     if (mouse.x === 0 && mouse.y === 0) {
@@ -199,27 +198,27 @@ class SolarSystem extends React.Component {
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     }
     function render() {
-      //render receives mouse data from addEventListener
-      //make it so that the particles xare exempt from the color change
+      // render receives mouse data from addEventListener
+      // make it so that the particles xare exempt from the color change
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(scene.children, true);
       for (let i = 0; i < intersects.length; i++) {
         if (
-          intersects[i].object === particleSystem ||
-          intersects[i].object === sphere2 ||
-          intersects[i].object === sprite
+          intersects[i].object === particleSystem
+          || intersects[i].object === sphere2
+          || intersects[i].object === sprite
         ) {
           return;
         }
       }
       if (intersects.length > 0) {
         if (INTERSECTED != intersects[0].object) {
-          //if intersected is not equal to an object set
+          // if intersected is not equal to an object set
           if (INTERSECTED) {
             INTERSECTED.scale.set(
               INTERSECTED.currentScale[0],
               INTERSECTED.currentScale[1],
-              INTERSECTED.currentScale[2]
+              INTERSECTED.currentScale[2],
             );
             // INTERSECTED.material.color.setHex(INTERSECTED.currentHex);
           }
@@ -228,9 +227,9 @@ class SolarSystem extends React.Component {
           // INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
           // INTERSECTED.material.color.setHex(0xff0000);
           INTERSECTED.currentScale = [
-            INTERSECTED.scale["x"],
-            INTERSECTED.scale["y"],
-            INTERSECTED.scale["z"],
+            INTERSECTED.scale.x,
+            INTERSECTED.scale.y,
+            INTERSECTED.scale.z,
           ];
           INTERSECTED.scale.set(3, 3, 3);
         }
@@ -239,7 +238,7 @@ class SolarSystem extends React.Component {
           INTERSECTED.scale.set(
             INTERSECTED.currentScale[0],
             INTERSECTED.currentScale[1],
-            INTERSECTED.currentScale[2]
+            INTERSECTED.currentScale[2],
           );
           // INTERSECTED.material.color.setHex(INTERSECTED.currentHex);
         }
@@ -248,11 +247,11 @@ class SolarSystem extends React.Component {
       // renderer.render(scene, camera);
     }
 
-    //USE KEYBOARD
+    // USE KEYBOARD
     const xSpeed = 1;
     const ySpeed = 1;
 
-    document.addEventListener("keydown", onDocumentKeyDown, false);
+    document.addEventListener('keydown', onDocumentKeyDown, false);
     function onDocumentKeyDown(event) {
       const keyCode = event.which;
       if (keyCode === 38) {
@@ -267,23 +266,23 @@ class SolarSystem extends React.Component {
     }
 
     scene.background = milkyWay;
-    //AUDIO
+    // AUDIO
     const listener = new THREE.AudioListener();
     camera.add(listener);
     const sound = new THREE.Audio(listener);
     scene.add(sound);
     const audioLoader = new THREE.AudioLoader();
     audioLoader.load(
-      "assets/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3",
-      function (buffer) {
+      'assets/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3',
+      (buffer) => {
         sound.setBuffer(buffer);
         sound.setLoop(true);
         sound.setVolume(0.5);
         // sound.play();
-      }
+      },
     );
     this.animate = () => {
-      console.log("animating...");
+      console.log('animating...');
       requestAnimationFrame(this.animate);
       renderer.render(scene, camera);
 
@@ -297,16 +296,18 @@ class SolarSystem extends React.Component {
       eris.rotation.y += 0.01;
       haumea.rotation.y += 0.03;
       makeMake.rotation.y += 0.09;
-      window.addEventListener("mousemove", onMouseMove, false);
-      window.addEventListener("keydown", onDocumentKeyDown, false);
+      window.addEventListener('mousemove', onMouseMove, false);
+      window.addEventListener('keydown', onDocumentKeyDown, false);
 
       render();
     };
     this.animate();
   }
+
   componentWillUnmount() {
     this.animate = null;
   }
+
   render() {
     return <div ref={(ref) => (this.mount = ref)} />;
   }
