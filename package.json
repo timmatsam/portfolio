@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "lint": "eslint client --fix",
+    "dev": "webpack serve --open",
     "build-watch": "webpack -w",
     "start": "nodemon server.js",
     "start-dev": "NODE_ENV='development' npm run build-watch & NODE_ENV='development' npm run start-server",
-    "start-server": "nodemon server.js -e html,js,scss --ignore public --ignore client",
-    "lint": "eslint client --fix"
+    "start-server": "nodemon server.js -e html,js,scss --ignore public --ignore client"
   },
   "author": "",
   "license": "ISC",

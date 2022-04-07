@@ -1,19 +1,22 @@
-const isDev = process.env.NODE_ENV === "development";
+const path = require('path');
 
 module.exports = {
-  mode: isDev ? "development" : "production",
+  mode: 'development',
   entry: [
-    "./client/App.js",
-    // "@babel/polyfill", // enables async-await
+    './client/App.js',
   ],
-  output: {
-    path: __dirname,
-    filename: "./public/bundle.js",
-  },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
-  devtool: "source-map",
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './public',
+  },
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    clean: true,
+  },
   watchOptions: {
     ignored: /node_modules/,
   },
@@ -22,11 +25,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
