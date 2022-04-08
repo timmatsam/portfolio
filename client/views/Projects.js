@@ -28,7 +28,7 @@ function Projects() {
       </div>
       <div className="indProjects">
         <a href="https://outdoor-equipment-incorporated.herokuapp.com/products">
-          <img src="assets/outdoor.png" />
+          <img src="assets/outdoor.png" alt="outdoor-equipment-website-miniature" />
           {' '}
           <h3 className="redirect">Redirect to ecommerce website.</h3>
         </a>

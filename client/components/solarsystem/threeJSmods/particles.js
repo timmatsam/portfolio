@@ -1,4 +1,4 @@
-// particles
+/* eslint-disable */
 const arrOfParticles = [];
 const particleCount = 1800;
 const pMaterial = new THREE.PointsMaterial({
