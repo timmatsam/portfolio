@@ -11,15 +11,7 @@ import {
 } from '../components/solarsystem/threeJSmods/textures';
 
 class SolarSystem extends React.Component {
-  constructor() {
-    super();
-    this.animate;
-  }
-
   componentDidMount() {
-    // const SolarSystem = () => {
-    console.log('rendering...');
-
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     this.mount.appendChild(renderer.domElement);
@@ -52,9 +44,7 @@ class SolarSystem extends React.Component {
         scene.add(gltf.scene);
       },
       undefined,
-      (error) => {
-        console.error(error);
-      },
+      (error) => error,
     );
     const satellites = new THREE.Group();
 
@@ -75,9 +65,7 @@ class SolarSystem extends React.Component {
         scene.add(satellite, satellite2);
       },
       undefined,
-      (error) => {
-        console.error(error);
-      },
+      (error) => error,
     );
 
     scene.add(satellites);
@@ -98,7 +86,7 @@ class SolarSystem extends React.Component {
       map: pTexture,
       color: 0x319bd3,
     });
-    for (let i = 0; i < particleCount; i++) {
+    for (let i = 0; i < particleCount; i += 1) {
       // let pY = 0 - (Math.random() * 1 - .5)
       const pX = Math.random() * 200 - 100;
       const pY = Math.random() * 100 - 50;
@@ -111,12 +99,9 @@ class SolarSystem extends React.Component {
     scene.add(particleSystem);
 
     // single line
-    const material = new THREE.LineBasicMaterial({ color: 0x0000ff });
     const points = [];
     points.push(new THREE.Vector3(-100, 0, 0));
     points.push(new THREE.Vector3(100, 0, 0));
-    const geometry = new THREE.BufferGeometry().setFromPoints(points);
-    const line = new THREE.Line(geometry, material);
 
     // sphere Geometry
     const sphereGeometry = new THREE.SphereBufferGeometry(5, 64, 64);
@@ -202,7 +187,7 @@ class SolarSystem extends React.Component {
       // make it so that the particles xare exempt from the color change
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(scene.children, true);
-      for (let i = 0; i < intersects.length; i++) {
+      for (let i = 0; i < intersects.length; i += 1) {
         if (
           intersects[i].object === particleSystem
           || intersects[i].object === sphere2
@@ -212,7 +197,7 @@ class SolarSystem extends React.Component {
         }
       }
       if (intersects.length > 0) {
-        if (INTERSECTED != intersects[0].object) {
+        if (INTERSECTED !== intersects[0].object) {
           // if intersected is not equal to an object set
           if (INTERSECTED) {
             INTERSECTED.scale.set(
@@ -251,7 +236,6 @@ class SolarSystem extends React.Component {
     const xSpeed = 1;
     const ySpeed = 1;
 
-    document.addEventListener('keydown', onDocumentKeyDown, false);
     function onDocumentKeyDown(event) {
       const keyCode = event.which;
       if (keyCode === 38) {
@@ -264,6 +248,7 @@ class SolarSystem extends React.Component {
         ship.position.x += xSpeed;
       }
     }
+    document.addEventListener('keydown', onDocumentKeyDown, false);
 
     scene.background = milkyWay;
     // AUDIO
@@ -282,7 +267,6 @@ class SolarSystem extends React.Component {
       },
     );
     this.animate = () => {
-      console.log('animating...');
       requestAnimationFrame(this.animate);
       renderer.render(scene, camera);
 
@@ -309,7 +293,12 @@ class SolarSystem extends React.Component {
   }
 
   render() {
-    return <div ref={(ref) => (this.mount = ref)} />;
+    return (
+      <div ref={(ref) => {
+        this.mount = ref;
+      }}
+      />
+    );
   }
 
   // return renderer.domElement;

@@ -1,4 +1,4 @@
-// TEXTURES
+/* eslint-disable */
 import * as THREE from 'three';
 
 const texture = new THREE.TextureLoader().load('assets/1_earth_8k.jpg');

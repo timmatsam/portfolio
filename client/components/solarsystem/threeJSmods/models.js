@@ -1,3 +1,4 @@
+/* eslint-disable */
 const loader = new GLTFLoader();
 let ship;
 loader.load(
