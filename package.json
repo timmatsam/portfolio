@@ -8,7 +8,7 @@
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
     "start-express-server": "node server.js -e html,js,scss --ignore public --ignore client",
-    "build-and-serve-prod": "webpack --config webpack.prod.js && npm run start-express-server",
+    "build-and-serve-prod": "npm install && webpack --config webpack.prod.js && npm run start-express-server",
     "lint": "eslint client --fix",
     "start": "node server.js"
   },
