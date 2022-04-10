@@ -2,12 +2,15 @@
   "name": "portfolio",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "17.x"
+  },
   "scripts": {
-    "build-watch": "webpack -w",
-    "start": "nodemon server.js",
-    "start-dev": "NODE_ENV='development' npm run build-watch & NODE_ENV='development' npm run start-server",
-    "start-server": "nodemon server.js -e html,js,scss --ignore public --ignore client",
-    "lint": "eslint client --fix"
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "start-express-server": "node server.js -e html,js,scss --ignore public --ignore client",
+    "build-and-serve-prod": "webpack --config webpack.prod.js && npm run start-express-server",
+    "lint": "eslint client --fix",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -40,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
     "raw-loader": "^4.0.2",
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.68.0",

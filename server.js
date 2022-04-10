@@ -1,26 +1,18 @@
-const express = require("express");
-const app = express();
-const path = require("path");
-// const PORT = process.env.PORT || 8000;
+const express = require('express');
+const path = require('path');
 
-//Heroku Step 4
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8080;
-}
+const app = express();
+const port = process.env.PORT || 5000
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`Portfolio Website started on Port ${port}`);
 });
 
-app.use(express.static("public"));
-// app.get("/*", (req, res) => res.send(path("./public/index.html")));
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"), function (err) {
+app.use(express.static('public'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'), (err) => {
     if (err) {
       res.status(500).send(err);
     }
   });
 });
-// app.listen(PORT, function () {
-// 	console.log("Server started!");
-// });
