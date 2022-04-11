@@ -1,9 +1,7 @@
-(A) fix husky @husky
 (B) change about section @frontend
 add logo to portfolio @frontend
-x why is clean necessary @webpack
-x figure out why webpack dev server runs without devServer options @webpack
 fuji san to be 100% of the width of the div
 fuji san -> mt.fuji
 replace console log in server @server
 heroku prunes dev dependencies but we need them for build @webpack
+update react to v18
