@@ -10,7 +10,8 @@
     "start-express-server": "node server.js -e html,js,scss --ignore public --ignore client",
     "build-and-serve-prod": "webpack --config webpack.prod.js && npm run start-express-server",
     "lint": "eslint client --fix",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
