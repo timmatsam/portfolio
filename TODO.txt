@@ -1,7 +1,17 @@
-(B) change about section @frontend
-add logo to portfolio @frontend
+change styling so that navbar does not unintentionally move @bug
+add footer logos to navbar @
+create new navbar using blurprintjs @style
 fuji san to be 100% of the width of the div
 fuji san -> mt.fuji
 replace console log in server @server
 heroku prunes dev dependencies but we need them for build @webpack
 update react to v18
+fix routes not rendering a view if user manually types it in @bug
+update homepage to redirect to /homepage @ux
+distinguish navbar and body @style
+make mobile friendly @ux
+x add logo to portfolio @frontend
+x convert homepage -> splashpage
+x remove commented out css
+x refactor about section to own section 
+x refactor footer from html to be a component @refactor
