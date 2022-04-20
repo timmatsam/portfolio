@@ -1,4 +1,4 @@
-#Setup
+# Setup
 Switch to node 17.x `nvm use 17`
 Install Dependencies `npm i` 
 ## Run Website Locally
