@@ -7,9 +7,9 @@ function HeaderNav() {
       <NavLink className="navlink" exact to="/">
         Homepage
       </NavLink>
-      {/* <NavLink className="navlink" to="/about">
-        About
-      </NavLink> */}
+      <NavLink className="navlink" to="/aboutme">
+        About Me
+      </NavLink>
       <NavLink className="navlink" to="/projects">
         Projects
       </NavLink>
