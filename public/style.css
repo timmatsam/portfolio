@@ -10,12 +10,7 @@ body {
   width: 100%;
   background-color: rgb(249 249 249);
   display: flex;
-  flex-direction: column; /* background: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(123, 185, 202, 0.7),
-    rgba(30, 144, 197, 0.3)
-  ); */
+  flex-direction: column; 
 }
 
 #main {
@@ -80,8 +75,6 @@ a.navlink:hover:before {
 
 .projects {
   display: grid;
-  /* grid-template-columns: 1fr 3fr 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr 2fr; */
   row-gap: 30px;
 }
 .indProjects {
@@ -90,10 +83,6 @@ a.navlink:hover:before {
   column-gap: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  /* font-family: "Libre Baskerville", serif; */
-  /* font-family: "Playfair Display", serif; */
-  /* font-family: "Pangolin", cursive; */
-  /* font-family: "Amiri", serif; */
   font-family: "Cinzel", serif;
 }
 .indProjects a {
