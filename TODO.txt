@@ -1,7 +1,5 @@
-(A) remove commented out css
-(B) convert homepage -> splashpage
-make footer icons easier for users to click @style
 change styling so that navbar does not unintentionally move @bug
+add footer logos to navbar @
 add logo to portfolio @frontend
 fuji san to be 100% of the width of the div
 fuji san -> mt.fuji
@@ -12,5 +10,8 @@ fix routes not rendering a view if user manually types it in @bug
 update homepage to redirect to /homepage @ux
 distinguish navbar and body @style
 make mobile friendly @ux
+create new navbar using blurprintjs @style
+x convert homepage -> splashpage
+x remove commented out css
 x refactor about section to own section 
 x refactor footer from html to be a component @refactor

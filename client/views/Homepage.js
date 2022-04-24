@@ -4,35 +4,51 @@ import styled from 'styled-components';
 // STYLED-COMPONENTS
 const Fuji = styled.img`
   width: 100%;
+  height: 85vh;
 `;
-const Wrapper = styled.div`
+const Caption = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-even;
   align-items: center;
   font-style: italic;
   margin: 1px;
   padding-top: 10px;
   color: rgba(79, 142, 172, 0.904);
 `;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: -40px;
+  margin-bottom: 20px;
+`;
+const Greeting = styled.h1`
+  color: #55141f;
+  font-style: italic;
+  position: absolute;
+  margin: 0 0 5rem 5rem;
+  font-size: 4vw;
+`;
 
 // COMPONENT
 function Homepage() {
   return (
-    <div id="homepage">
-      <Wrapper>
-        <Fuji src="assets/fuji.jpg" alt="highest-point-on-mount-fuji" />
+    <Wrapper>
+      <Fuji src="assets/fuji.jpg" alt="highest-point-on-mount-fuji" />
+      <Greeting>...Hello</Greeting>
+      <Caption>
         <p>
-          At 9pm, we started our hike towards the summit...
+          A quote someone quoted to me after I trekked Mt. Fuji...
         </p>
-        <p>...reaching the top at 6am, we make it just in time to catch the sunrise.</p>
         <p>
           "If you never climb Mt. Fuji, you're a fool, and if you climb it more than once,
           you're a crazy fool."
 
         </p>
-      </Wrapper>
-    </div>
+        <p>Of course, I stopped after 1.</p>
+      </Caption>
+    </Wrapper>
   );
 }
 
