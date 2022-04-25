@@ -10,7 +10,8 @@ const Headshot = styled.img`
     margin-right: 80px;
 `;
 const StyledAbout = styled(About)`
-    width: 60%;
+    width: 50%;
+    font-style: italic;
     color: black;
 `;
 const Wrapper = styled.div`

@@ -5,9 +5,9 @@ function About({ className }) {
     <p className={className}>
       I have a kindle.
       My spotify playlist is 70% JPop/JRock, the other 30% is every
-      other language in the world, including classical music. You
-      NEED to have classical music in your playlist, or you're
-      simply not cultured. I enjoy traveling - domestically and internationally.
+      other language in the world, including classical music.
+      I simply cannot fathom a world without Chopin.
+      I enjoy traveling - domestically and internationally.
       Domestic travel involves going to the italian restaurant down the street.
       International travel refers to travel time greater than 30 minutes in any direction (by car).
       On a serious note, if I do travel I NEVER pay for a checked bag.
