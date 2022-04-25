@@ -46,7 +46,7 @@ function Homepage() {
           you're a crazy fool."
 
         </p>
-        <p>Of course, I stopped after 1.</p>
+        <p>Of course, I stopped after one.</p>
       </Caption>
     </Wrapper>
   );

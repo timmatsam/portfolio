@@ -1,6 +1,6 @@
 change styling so that navbar does not unintentionally move @bug
 add footer logos to navbar @
-add logo to portfolio @frontend
+create new navbar using blurprintjs @style
 fuji san to be 100% of the width of the div
 fuji san -> mt.fuji
 replace console log in server @server
@@ -10,7 +10,7 @@ fix routes not rendering a view if user manually types it in @bug
 update homepage to redirect to /homepage @ux
 distinguish navbar and body @style
 make mobile friendly @ux
-create new navbar using blurprintjs @style
+x add logo to portfolio @frontend
 x convert homepage -> splashpage
 x remove commented out css
 x refactor about section to own section 
