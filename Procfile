@@ -1,1 +1,1 @@
-web: npm run build-and-serve-prod
+web: pnpm run build-and-serve-prod
