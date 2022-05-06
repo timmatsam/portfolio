@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Portfolio Website started on Port ${port}`);
