@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "rootDir": "./client",
+    "outDir": "./public/",
+    "allowJs": true,
+    "rootDirs": ["client/app.js"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strictNullChecks": true
+  },
+  "include": ["client"],
+}

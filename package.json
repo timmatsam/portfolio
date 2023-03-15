@@ -33,8 +33,7 @@
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.5",
     "three": "^0.137.5",
-    "threex": "^1.0.0",
-    "typescript": "^4.9.5"
+    "threex": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -55,7 +54,10 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.8",
     "raw-loader": "^4.0.2",
+    "source-map-loader": "^4.0.1",
     "terser-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4",
